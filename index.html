@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Landing Page</title>
+        <style>
+            /*Source: https://www.youtube.com/watch?v=ccO2B40zkv4*/
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+            body{
+                display: flex;
+                /*justify-content: center;
+                align-items: center;*/
+                height: 500px;
+                background: #252839;
+            }
+            h2{
+                position: relative;
+                left: 2vw;
+                font-size: 12vw;
+                color: #252839;
+                -webkit-text-stroke: 0.3vw #383d52;
+                text-transform: uppercase;
+            }
+            h2::before{
+                content: attr(data-text);
+                position: absolute;
+                top:0;
+                left: 10px;
+                width:0;
+                /*height: 100%;*/
+                color: #01fe87;
+                -webkit-text-stroke: 0vw #383d52;
+                border-right: 2px solid #01fe87;
+                overflow: hidden;
+                animation: animate 6s linear infinite;
+            }
+            @keyframes animate{
+                0%, 10%, 100%
+                {
+                    width: 0;
+                }
+                70%, 90%
+                {
+                    width: 100%;
+                }
+            }
+            #first{
+                position: absolute;
+                top: 4vw;
+            }
+            #first::before{
+                animation: animate 6s linear infinite;
+            }
+            #second{
+                position: absolute;
+                top: 15vw;
+            }
+            #third{
+                position: absolute;
+                top: 27vw;
+            }
+            #play{
+                position: relative;
+                top:10vw;
+                height: 5vw;
+                left: 70vw;
+                border: 2px solid #01fe87; 
+                border-radius: 15%;
+                width: 10vw;
+                background-color: #383d52;
+                font-size: 3vw;
+                color: #01fe87;
+                animation: anim 2s ease-in-out infinite;
+            }
+            #play:hover{
+                transform: scale(1.2);
+            }
+            
+            /* Keyframe Source: https://www.youtube.com/watch?v=aO6Ax9CuyN4e*/
+            @keyframes anim{
+                0%{
+                    top: 50%;
+                }
+                50%{
+                    top:43%;
+                }
+                100%{
+                    top:50%;
+                }
+            }
+
+            @media only screen and (min-width: 500px)and(max-width: 800px){
+                #play{
+                    position: relative;
+                    left: 550px;
+                    bottom: 10px;
+                }
+            }
+            @media only screen and (min-width: 810px) and (max-width: 1200px){
+                #play{
+                    position: relative;
+                    bottom: 10px;
+                    left: 650px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id = "first" data-text="Jog">Jog</h2><br>
+        
+        <h2 id = "second" data-text="your">your</h2><br>
+        <h2 id = "third" data-text="Memory...">Memory...</h2>
+        
+        <button type="button" id="play" onclick="window.location.assign('game.html')">Play</button>
+    </body>
+</html>
