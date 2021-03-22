@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    background-color: #252839;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#gameHeader{
+    font-family: 'Poppins', sans-serif;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+     font-size: 4vw;
+     color: #252839;
+     -webkit-text-stroke: 0.2vw #4a4e69;
+     text-transform: uppercase;
+}
+#spanish{
+    position: absolute;
+    top: 5px;
+    right: 1vw;
+    margin: 10px;
+    font-size: 15px;
+    width: 65px;
+    height: 35px;
+    border: 2px solid white;
+}
+#spanish:hover{
+    transform: scale(1.05);
+}
+#english{
+    position: absolute;
+    top: 5px;
+    right:0;
+    font-size: 15px;
+    width: 65px;
+    height: 35px;
+    margin: 10px;
+    border: 2px solid white;
+}
+#english:hover{
+    transform: scale(1.05);
+}
+#startBtn{
+    position: relative;
+    border: 1px solid white;
+    background-color: #383d52;
+    color: white;
+    border-radius: 20%;
+    font-size: 15px;
+    width: 60px;
+    height: 30px;
+    top: 20px;
+    left: 620px;
+}
+#stopBtn{
+    position: relative;
+    border: 1px solid white;
+    background-color: #383d52;
+    color: white;
+    border-radius: 20%;
+    font-size: 15px;
+    width: 60px;
+    height: 30px;
+    top: 20px;
+    left: 620px;
+}
+.hidden {
+  display: none;
+}
+#startBtn:hover{
+    box-shadow: 2px 2px 6px;
+    transform: scale(1.05);
+}
+#stopBtn:hover{
+    box-shadow: 2px 2px 6px;
+    transform: scale(1.05);
+}
+
+#instruction{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+#info{
+    position: relative;
+    height: 10vh;
+    width: 10vw;
+    top:1vh;
+    left: 1vw;
+}
+
+
+#keys > button{
+    border: 10px solid black;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+}
+
+#key1, #key2, #key3{
+    position: absolute;
+    width: 180px;
+    height: 170px;
+    padding: 10px;
+    top: 250px;
+    margin: auto;
+    border-radius: 16%;
+}
+#key4,#key5,#key6{
+    position: absolute;
+    width: 180px;
+    height: 170px;
+    padding: 10px;
+    top: 450px;
+    margin: auto;
+    border-radius: 16%;
+}
+#key1{
+    position: absolute;
+    left: 20%;
+    border: 3px solid #5a189a;
+    background-color: #5a189a;
+}
+#key1:active, #key1.lit{
+    background: linear-gradient(#240046,#3c096c,#5a189a,#7b2cbf);
+    transform: scale(1.05);
+}
+#key2{
+    position: absolute;
+    left: 40%;
+    border: 3px solid #ee964b;
+    background: #ee964b;
+}
+#key2:active, #key2.lit{
+    background: linear-gradient(#ff6d00,#ff9e00);
+    transform: scale(1.05);
+}
+#key3{
+    position: absolute;
+    left: 60%;
+    border: 3px solid #9ef01a;
+    background: #9ef01a;   
+}
+#key3:active, #key3.lit{
+    border: 1px solid #006400;
+    background: linear-gradient(#006400,#007200,#008000);
+    transform: scale(1.05);
+}
+#key4{
+    position: absolute;
+    left: 20%;
+    border: 3px solid #da1e37;
+    background: #da1e37; 
+}
+#key4:active, #key4.lit{
+    border: 1px solid #4f000b;
+    background: linear-gradient(#4f000b,#720026,#641220,#85182a);
+    transform: scale(1.05);
+}
+#key5{
+    position: absolute;
+    left: 40%;
+    border: 3px solid #457b9d;
+    background: #457b9d; 
+}
+#key5:active, #key5.lit{
+    border: 1px solid #4f000b;
+    background: linear-gradient(#0096c7,#0077b6,#023e8a,#03045e);
+    transform: scale(1.05);
+}
+#key6{
+    position: absolute;
+    left: 60%;
+    border: 3px solid #ff5c8a;
+    background: #ff5c8a; 
+}
+#key6:active, #key6.lit{
+    border: 1px solid #4f000b;
+    background: linear-gradient(#ff477e,#ff0a54,#d81159,#f20089);
+    transform: scale(1.05);
+}
+@media only screen and (max-width: 800px) {
+  #spanish,#english{
+        font-size: 10px;
+        width: 45px;
+        height: 20px;
+  }
+  #startBtn, #stopBtn{
+    font-size: 10px;
+    width: 45px;
+    height: 20px;
+  }
+  #instruction{
+    font-size: 16px;
+  }
+    #key1, #key2{ 
+    width: 180px;
+    height: 160px;
+    padding: 10px;
+    top: 130px;
+  }
+    #key3,#key4{
+    width: 180px;
+    height: 160px;
+    padding: 10px;
+    top: 310px;
+    }
+   #key5, #key6{
+     width: 180px;
+    height: 160px;
+    padding: 10px;
+    top: 480px;
+  }
+    #key1,#key3,#key5{
+        left:130px;
+    }
+    #key2,#key4,#key6{
+        left:330px;
+    }
+  
+}
+@media only screen and (min-width: 810px) and (max-width: 1200px) {
+  #spanish,#english{
+        font-size: 15px;
+        width: 65px;
+        height: 30px;
+  }
+  #startBtn, #stopBtn{
+    font-size: 15px;
+    width: 55px;
+    height: 30px;
+  }
+  #instruction{
+    font-size: 18px;
+  }
+    #key1, #key2,#key3{ 
+    width: 180px;
+    height: 170px;
+    padding: 10px;
+    top: 160px;
+  }
+
+   #key4, #key5, #key6{
+     width: 180px;
+    height: 170px;
+    padding: 10px;
+    top: 360px;
+  }
+    #key2,#key5{
+        left: 400px;
+    }
+    #key3,#key6{
+        left: 600px;
+    }
+  
+}
